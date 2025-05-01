@@ -81,6 +81,7 @@ async function uploadImage() {
         }
 
         const result = await response.json();
-        document.getElementById('result').innerText = "Prediction: " + JSON.stringify(result);
+        const resultText = result.prediction ? "Pneumonia Detected" : "Normal";
+        document.getElementById('result').innerText = "Prediction: " + resultText;
     };    
 }
