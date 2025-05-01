@@ -61,6 +61,7 @@ async function uploadImage() {
     const img = new Image();
     img.src = URL.createObjectURL(imgFile);
 
+    console.log("Starting Prediction")
     img.onload = async () => {
         
         const body = createCanvasImage(img);
